@@ -1,17 +1,28 @@
 {
   "expo": {
+    // _____________________ BASIC APP CONFIGURATION _____________________
     "name": "AppA",
     "slug": "appa",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "userInterfaceStyle": "light",
+
+    // _____________________ SPLASH SCREEN CONFIGURATION _____________________
     "splash": {
       "image": "./assets/images/splash-icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+
+    // Asset Binding: Includes all files in the asset bundle (the **/* pattern means "everything").
     "assetBundlePatterns": ["**/*"],
+
+
+    // _____________________ IOS Configuration: _____________________
+    //supportsTablet: App works on iPads
+    // bundleIdentifier: Unique iOS app identifier
+    // LSApplicationQueriesSchemes: Allows your app to check if other apps with appb:// scheme are installed
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.sumit.appa",
@@ -19,12 +30,20 @@
         "LSApplicationQueriesSchemes": ["appb"]  // 👈 allow canOpenURL for appb
       }
     },
+
+
+    // _____________________ Android Configuration: _____________________
     "android": {
       "package": "com.sumit.appa",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
+
+      // Intent Filters
+      // This generates the deep linking configuration in your manifest:
+      // This becomes the intent filter in your manifest that handles appa:// URLs.
+
        "intentFilters": [
         {
           "action": "VIEW",
@@ -32,6 +51,9 @@
           "category": ["BROWSABLE", "DEFAULT"]
         }
       ],
+
+      // This generates the <queries> section in your manifest, 
+      // allowing your app to detect and interact with apps that handle appb:// URLs.
       "queries": [                       // 👈 this enables canOpenURL for appb
         {
           "action": "VIEW",
@@ -42,6 +64,8 @@
     "web": {
       "favicon": "./assets/images/favicon.png"
     },
+
+    // Global app scheme
     "scheme": "appa"
   }
 }
