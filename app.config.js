@@ -3,7 +3,7 @@ import withAndroidQueries from './plugins/withAndroidQueries';
 
 export default {
   expo: {
-    name: 'AppA',
+    name: 'AEDD',
     slug: 'appa',
     scheme: 'appa',
     version: '1.0.0',
@@ -27,6 +27,11 @@ export default {
       adaptiveIcon: {
         foregroundImage: './assets/images/adaptive-icon.png',
         backgroundColor: '#ffffff',
+      },
+    },
+     extra: {
+      eas: {
+        projectId: '2bf5bb01-3ac1-46cc-a497-2b46e966a1a7',
       },
     },
     plugins: [withAndroidQueries],

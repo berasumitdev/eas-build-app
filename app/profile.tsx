@@ -23,7 +23,7 @@ export default function HomeScreen() {
     }
 
         // const url = `appb://token/${token}`;
-        const url = `satelliteoracle://auth?token=${encodeURIComponent(token)}`;
+        const url = `satelliteoracle:///auth?token=${encodeURIComponent(token)}`;
         // const url=`appb://token?token=${token}`;
         // const url ="https://brainhub.eu/library/deliver-react-native-app-to-the-client"
 
